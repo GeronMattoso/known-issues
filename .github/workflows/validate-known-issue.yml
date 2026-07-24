@@ -1,0 +1,16 @@
+name: Validate Known Issue
+
+on:
+  issues:
+    types:
+      - opened
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Display issue information
+        run: |
+          echo "Nova issue recebida"
+          echo "Título: ${{ github.event.issue.title }}"
+          echo "Autor: ${{ github.event.issue.user.login }}"
