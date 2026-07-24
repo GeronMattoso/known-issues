@@ -37,6 +37,8 @@ body:
         - Desenvolvimento
         - Homologação
         - Produção
+    validations:
+      required: true
 
   - type: textarea
     id: sintoma
@@ -67,5 +69,8 @@ body:
   - type: input
     id: tags
     attributes:
-      label: Tags
-      placeholder: aws, esteira, produção
+      label: Tags obrigatórias
+      description: Informe palavras para facilitar a busca
+      placeholder: aws, glue, permissao, esteira
+    validations:
+      required: true
