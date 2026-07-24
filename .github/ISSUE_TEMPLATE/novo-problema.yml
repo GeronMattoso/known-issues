@@ -1,0 +1,71 @@
+name: Novo problema encontrado
+description: Registrar uma falha e sua solução na base de conhecimento
+title: "[KNOWN-ISSUE] "
+labels:
+  - new-issue
+
+body:
+  - type: input
+    id: titulo
+    attributes:
+      label: Título do problema
+      description: Nome curto para identificar o problema
+      placeholder: Exemplo - Falha ao criar tabela em produção
+    validations:
+      required: true
+
+  - type: dropdown
+    id: categoria
+    attributes:
+      label: Categoria
+      options:
+        - Esteira
+        - AWS
+        - GitHub
+        - StackSpot
+        - Terraform
+        - Spark
+        - Banco
+    validations:
+      required: true
+
+  - type: dropdown
+    id: ambiente
+    attributes:
+      label: Ambiente
+      options:
+        - Desenvolvimento
+        - Homologação
+        - Produção
+
+  - type: textarea
+    id: sintoma
+    attributes:
+      label: Sintoma
+      description: O que aconteceu?
+    validations:
+      required: true
+
+  - type: textarea
+    id: erro
+    attributes:
+      label: Mensagem de erro
+      render: text
+
+  - type: textarea
+    id: causa
+    attributes:
+      label: Causa identificada
+
+  - type: textarea
+    id: solucao
+    attributes:
+      label: Solução aplicada
+    validations:
+      required: true
+
+  - type: input
+    id: tags
+    attributes:
+      label: Tags
+      placeholder: aws, esteira, produção
