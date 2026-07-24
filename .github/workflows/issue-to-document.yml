@@ -24,6 +24,7 @@ jobs:
           ISSUE_NUMBER: ${{ github.event.issue.number }}
         run: |
           python scripts/issue_to_markdown.py
+          python scripts/generate_index.py
 
       - name: Commit documentation
         run: |
